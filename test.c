@@ -40,8 +40,8 @@ void resource_leak_2(void)
 void use_after_free(void)
         {
                 char *p = malloc(4);
-                free(p);
                 *p = 'a';
+                free(p);
         }
 
 struct bigger_than_ptr { int a; int b; int c; int d; };
