@@ -85,7 +85,7 @@ void reverse_negative(void)
 
 void uninit(void)
         {
-                char* p;
+                char* p = 0;
                 *p = 'a';
         }
 
@@ -93,7 +93,7 @@ void overrun_static(void)
         {
                 char buf[10];
                 int i;
-                for (i = 0; i <= 10; i++)
+                for (i = 0; i < 10; i++)
                         buf[i] = '\0';
         }
 
